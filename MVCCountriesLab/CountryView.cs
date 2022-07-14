@@ -35,9 +35,11 @@ namespace MVCCountriesLab
             if (Enum.TryParse(colorName, out ConsoleColor color))
             {
                 Console.ForegroundColor = color;
+                if(color == ConsoleColor.Black)
+                {
+                    Console.BackgroundColor = ConsoleColor.White;
+                }
             }
-            else
-                Console.ForegroundColor = ConsoleColor.Black;
 
         }
 
